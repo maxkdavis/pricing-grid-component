@@ -23,12 +23,13 @@ body {
     min-height: 100vh;
 }
 
-h4 {
+h3 {
     margin: 0 0 1rem 0;
 }
 
 p {
     margin: 0;
+    padding-bottom: 1rem;
 }
 
 ul {
@@ -38,12 +39,14 @@ ul {
 }
 
 li {
-    font-size: 0.625rem;
+    font-size: 0.875rem;
     color: var(--secondary-light-gray);
+    opacity: 0.75;
     line-height: 1.5;
 }
 
-#main-grid {
+#grid {
+    display: grid;
     max-width: 310px;
     margin: 0 auto;
 }
@@ -53,15 +56,15 @@ li {
     padding: 1.5rem;
 }
 
-#main-grid .one {
+#grid .one {
     background-color: #fff;
 }
 
-#main-grid .two {
+#grid .two {
     background-color: var(--primary-cyan);
 }
 
-#main-grid .three {
+#grid .three {
     background-color: hsla(179, 62%, 43%, 0.7);
 }
 
@@ -73,22 +76,79 @@ li {
     border-radius: 0 0 0.5rem 0.5rem;
 }
 
-.one h4 {
+.one h3 {
     color: var(--primary-cyan);
 }
 
-.two h4,
-.three h4 {
+.two h3,
+.three h3 {
     color: #fff;
 }
 
+.one .green-text {
+    color: var(--primary-bright-yellow);
+}
+
+.one p {
+    font-size: 0.875rem;
+    line-height: 2;
+    color: hsla(218, 22%, 67%, 0.5);
+}
+
+.two p {
+    color: #fff;
+}
+
+.two .pricing {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.two .pricing span {
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.5;
+    vertical-align: middle;
+}
+
+.grid-square button {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--primary-bright-yellow);
+    border: none;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 16px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* DESKTOP LAYOUT */
-@media (min-width: 600px) {
-    #main-grid {
+@media (min-width: 38rem) {
+    #grid {
+        display: grid;
+        max-width: 620px;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-square.one {
+        padding: 2.5rem;
+    }
+
+    .grid-square.two,
+    .grid-square.three {
+        padding: 2rem;
     }
 
     .grid-col-span-2 {
         grid-column: span 2;
+    }
+
+    .two {
+        border-radius: 0 0 0 0.5rem;
+    }
+
+    .three {
+        border-radius: 0 0 0.5rem 0;
     }
 }
