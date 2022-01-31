@@ -18,9 +18,10 @@ html {
 body {
     background-color: var(--secondary-light-gray);
     font-family: "Karla", sans-serif;
-    margin: 0;
-    padding: 4rem 0;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h3 {
